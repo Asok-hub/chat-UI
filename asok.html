@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp UI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#ece5dd;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.app{
+  width:900px;
+  height:600px;
+  background:#fff;
+  display:flex;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* CONTACTS */
+.contacts{
+  width:35%;
+  background:#f0f2f5;
+  border-right:1px solid #ddd;
+  display:flex;
+  flex-direction:column;
+}
+
+.contacts-header{
+  padding:15px;
+  background:#075e54;
+  color:white;
+  font-size:18px;
+  font-weight:600;
+}
+
+.contact{
+  display:flex;
+  align-items:center;
+  padding:12px;
+  cursor:pointer;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.contact:hover{
+  background:#e9edef;
+}
+
+.contact img{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  margin-right:12px;
+}
+
+.contact-info h4{
+  font-size:15px;
+}
+
+.contact-info p{
+  font-size:13px;
+  color:#555;
+}
+
+/* CHAT AREA */
+.chat{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  background:#ece5dd;
+}
+
+.chat-header{
+  background:#075e54;
+  color:white;
+  padding:12px;
+  display:flex;
+  align-items:center;
+}
+
+.chat-header img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  margin-right:10px;
+}
+
+.chat-box{
+  flex:1;
+  padding:15px;
+  overflow-y:auto;
+}
+
+.msg{
+  max-width:65%;
+  padding:10px 14px;
+  margin-bottom:10px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+.received{
+  background:white;
+  border-top-left-radius:0;
+}
+
+.sent{
+  background:#dcf8c6;
+  margin-left:auto;
+  border-top-right-radius:0;
+}
+
+/* INPUT */
+.chat-input{
+  display:flex;
+  padding:10px;
+  background:#f0f2f5;
+}
+
+.chat-input input{
+  flex:1;
+  padding:10px 15px;
+  border-radius:20px;
+  border:none;
+  outline:none;
+}
+
+.chat-input button{
+  margin-left:10px;
+  background:#075e54;
+  color:white;
+  border:none;
+  padding:0 18px;
+  border-radius:50%;
+  font-size:18px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+  .app{
+    width:100%;
+    height:100vh;
+    border-radius:0;
+  }
+  .contacts{
+    width:40%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- CONTACT LIST -->
+  <div class="contacts">
+    <div class="contacts-header">WhatsApp</div>
+
+    <div class="contact">
+      <img src="https://i.pravatar.cc/150?img=1">
+      <div class="contact-info">
+        <h4>Rahul</h4>
+        <p>Hey there!</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <img src="https://i.pravatar.cc/150?img=2">
+      <div class="contact-info">
+        <h4>Priya</h4>
+        <p>See you soon 😊</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <img src="https://i.pravatar.cc/150?img=3">
+      <div class="contact-info">
+        <h4>College Group</h4>
+        <p>Assignment uploaded</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <img src="https://i.pravatar.cc/150?img=4">
+      <div class="contact-info">
+        <h4>Mom ❤️</h4>
+        <p>Call me</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAT -->
+  <div class="chat">
+    <div class="chat-header">
+      <img src="https://i.pravatar.cc/150?img=1">
+      <div>
+        <div>Rahul</div>
+        <small>online</small>
+      </div>
+    </div>
+
+    <div class="chat-box">
+      <div class="msg received">Hey 👋</div>
+      <div class="msg received">Free now?</div>
+
+      <div class="msg sent">Yes bro 😄</div>
+      <div class="msg sent">What's up?</div>
+
+      <div class="msg received">Let's meet today 🔥</div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" placeholder="Type a message">
+      <button>➤</button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
